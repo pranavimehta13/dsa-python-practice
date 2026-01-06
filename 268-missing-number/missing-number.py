@@ -5,8 +5,10 @@ class Solution(object):
         :rtype: int
         """
         n = len(nums)
-        for i in range(n+1):
-            if i not in nums:
-                return i
+        req_sum = (n*(n+1))//2
+        add = 0
+        act_sum = sum(nums)
+        return req_sum - act_sum
+
         
         
