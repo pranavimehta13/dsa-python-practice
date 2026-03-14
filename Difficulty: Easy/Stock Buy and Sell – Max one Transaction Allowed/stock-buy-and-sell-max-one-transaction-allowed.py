@@ -2,11 +2,10 @@ class Solution:
     def maxProfit(self, prices):
         profit = 0
         max_profit = 0
-        minsofar = prices[0]
-        n = len(prices)
-        for i in range(n):
+        min_sofar = prices[0]
+        for i in range(len(prices)):
             sell = prices[i]
-            profit = sell - minsofar
-            minsofar = min(prices[i],minsofar)
-            max_profit = max(profit,max_profit)
+            min_sofar = min(prices[i], min_sofar)
+            profit = sell - min_sofar
+            max_profit = max(profit, max_profit)
         return max_profit
